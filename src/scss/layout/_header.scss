@@ -1,0 +1,13 @@
+.header {
+    position: fixed;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__social {
+        width: 30px;
+    }
+}

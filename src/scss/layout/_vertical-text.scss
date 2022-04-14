@@ -1,0 +1,27 @@
+// Vertical text
+
+.vertical-text {
+    white-space: nowrap;
+    font-size: 9.375rem;
+    font-size: clamp(9.375rem, 7.336956521739131rem + 3.260869565217391vw, 11.25rem);
+    color: var(--color-light-1-transparent);
+    transform: rotate(90deg);
+    transform-origin: 0 0;
+    z-index: -1;
+    line-height: 0;
+}
+
+.vertical-text-left {
+    grid-column: 1/2;
+    left: 4vw;
+    position: absolute;
+}
+
+.vertical-text-right {
+    grid-column: -2/-1;
+    transform-origin: right;
+    z-index: 6;
+    right: 65%;
+    top: 86%;
+    position: absolute;
+}

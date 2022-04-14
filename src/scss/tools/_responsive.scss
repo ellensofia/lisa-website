@@ -1,0 +1,86 @@
+// responsive mixins
+// usage::after
+// @use '../tools/responsive' as responsive
+//
+// in selector:
+// @include responsive.max() { ... }
+// or
+// @include resopnsive.max(400px) { ... }
+
+
+
+// Max width
+@mixin max($breakpoint: 46rem) {
+    @media screen and (max-width: $breakpoint) {}
+
+}
+
+
+// Min width
+
+@mixin min($breakpoint: 87.5rem) {
+    @media screen and (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+// TEMP placement
+
+@media screen and (max-width: 600px) {
+    .footer {
+        &__content {
+            flex-direction: column;
+        }
+    }
+
+    #contact {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 901px) {
+
+    div.gallery__item-5 {
+        display: flex;
+        align-items: flex-start;
+        flex: unset;
+
+        & img {
+            max-width: 42vw;
+            margin-right: var(--section-gap-base);
+            object-fit: contain;
+        }
+
+        .gallery__text {
+            min-width: 250px;
+            margin-top: 0;
+        }
+    }
+
+    .vertical-text {
+        opacity: 0;
+    }
+
+    div.gallery__inner,
+    div.exp__inner {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .gallery__item-5 {
+        flex-direction: column;
+
+        .gallery__img-5 {
+            max-width: 100%;
+            margin-bottom: var(--section-gap-base);
+        }
+    }
+}
+
+@media screen and (max-width: 735px) {
+    div.gallery__item-1 {
+        flex: 0 1 100%;
+    }
+
+}

@@ -1,0 +1,114 @@
+@use '../components/transitions'as transition;
+
+// Menu
+
+.menu {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+        display: flex;
+        padding: 0;
+
+        :first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__item {
+        list-style: none;
+        margin-left: var(--section-gap-4);
+        @include transition.link-transition;
+
+    }
+
+
+    &__link {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+// Hamburger menu
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    background-color: var(--color-dark);
+    height: 2px;
+    width: 26px;
+    margin: 7px auto;
+    -webkit-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+}
+
+// Responisve
+
+@media screen and(max-width: 850px) {
+
+    .header__social {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .nav {
+        display: grid;
+        grid-template-columns: var(--grid-column);
+    }
+
+    .menu {
+        grid-column: inner;
+        position: fixed;
+        padding: 10px;
+        height: fit-content;
+        right: -100%;
+        top: 90px;
+        background-color: var(--color-dark);
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        transition: 0.3s 0.3s ease-in;
+
+        &__item {
+            margin: 16px 0;
+        }
+
+        &__link {
+            color: var(--color-light-1);
+        }
+
+        &__list {
+            display: block;
+        }
+
+        &:hover {
+            @include transition.link-transition($background: var(--color-light-1));
+        }
+    }
+
+    .menu.active {
+        right: 0;
+    }
+}

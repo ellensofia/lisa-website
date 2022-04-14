@@ -1,0 +1,83 @@
+@use '../../components/buttons'as button;
+@use '../../components/transitions'as transition;
+@use '../../tools/responsive'as responsive;
+
+// Första sidan
+
+.portfolio {
+
+    background-color: var(--color-light-2);
+    padding-bottom: var(--section-gap-4);
+    position: relative;
+    z-index: 7;
+
+    &__inner {
+        position: relative;
+        display: flex;
+        justify-content: center
+    }
+
+    &__link {
+        z-index: 15;
+        @include transition.link-transition;
+        padding-bottom: var(--section-gap-2);
+    }
+
+    &__title,
+    &__link {
+        padding-left: 36px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding-top: var(--section-gap-4);
+    }
+
+    &__slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &__imgs {
+        display: flex;
+        padding: 0 var(--section-gap-1);
+
+        & img {
+            max-width: 35vw;
+
+            &:last-child {
+                margin-left: var(--section-gap-base);
+            }
+        }
+    }
+
+    & .vertical-text {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .portfolio {
+
+        &__imgs {
+            padding: 0 var(--section-gap-base);
+        }
+
+        &__title,
+        &__link {
+            padding-left: 0px;
+        }
+
+        &__content {
+            align-items: center;
+        }
+
+        &__chevron {
+            height: 20px;
+        }
+    }
+}

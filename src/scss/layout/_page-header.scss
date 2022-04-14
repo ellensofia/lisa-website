@@ -1,0 +1,31 @@
+// .page-container {
+// overflow-x: clip;
+
+.page-header {
+    height: 90px;
+    background-color: var(--color-dark);
+    position: relative;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__category {
+        color: var(--color-light-1);
+    }
+
+    &__categories {
+        color: var(--color-light-1);
+        background-color: var(--color-light-1-transparent);
+        padding: 8px 50px;
+        display: flex;
+
+        &--arrow {
+            margin-left: var(--section-gap-base);
+        }
+    }
+}
+
+// }

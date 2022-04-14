@@ -1,0 +1,56 @@
+@use '../../components/buttons'as button;
+@use '../../components/transitions'as transition;
+
+.hero {
+    display: flex;
+    flex-direction: column;
+
+    &__background {
+        background-image: url(/Assets/Images/background-white.jpg);
+        background-size: cover;
+        background-position: bottom 80%;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 378px;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: center;
+        margin-top: var(--section-gap-3);
+    }
+
+    &__btn {
+        @include button.standard;
+    }
+
+    &__btn:last-child {
+        margin-left: 17.5px;
+        @include button.secondary;
+    }
+
+    &__logo>img {
+        max-width: 37vw;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        max-width: 65vw;
+    }
+
+}
+
+.transition {
+    @include transition.link-transition;
+}

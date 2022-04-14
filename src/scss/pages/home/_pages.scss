@@ -1,0 +1,141 @@
+.header {
+    position: relative;
+    height: 90px;
+}
+
+.gallery {
+    padding-top: var(--section-gap-3);
+    position: relative;
+
+    &__inner {
+        margin-bottom: var(--section-gap-4);
+        padding-left: 8vw;
+    }
+
+    img {
+        display: block;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-size: clamp(2rem, 0.9584257975034673rem + 4vw, 4.00875rem);
+        margin-right: var(--section-gap-base);
+        margin-bottom: var(--section-gap-base);
+    }
+
+    &__row-1,
+    &__row-2 {
+        display: flex;
+        flex-direction: row;
+        gap: var(--section-gap-base);
+        flex-wrap: wrap;
+    }
+
+    &__row-1 {
+        margin-bottom: var(--section-gap-base);
+    }
+
+    &__item-1 {
+        align-self: flex-end;
+        flex: 0 1 35%;
+    }
+
+    &__item-2 {
+        flex: 1 1 20%;
+        min-width: 60%;
+    }
+
+    &__item-3,
+    &__item-4 {
+        flex: 1 1 20%;
+        min-width: 200px;
+    }
+
+    &__item-5 {
+        flex: 1 1 20%;
+        min-width: 300px;
+    }
+
+    & p {
+        min-width: 290px;
+        max-width: 400px;
+        margin-top: var(--section-gap-2);
+    }
+}
+
+.exp {
+    background-color: var(--color-light-2);
+    z-index: 4;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    &__inner {
+        padding: var(--section-gap-4) 8vw var(--section-gap-4) 0;
+    }
+
+    &__title {
+        margin-bottom: var(--section-gap-2);
+        font-size: clamp(2rem, 0.9584257975034673rem + 4vw, 4.00875rem);
+    }
+
+    &__imgs {
+        display: flex;
+        gap: var(--section-gap-base);
+    }
+
+    &__img {
+        min-width: 200px;
+        object-fit: contain;
+    }
+
+    &__text {
+        margin-top: var(--section-gap-2);
+        max-width: 400px;
+    }
+}
+
+
+@media screen and (max-width:637px) {
+    .exp__imgs {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+// .vertical-text {
+//     background-color: pink;
+//     white-space: nowrap;
+//     font-size: 200px;
+//     color: var(--color-light-1-transparent);
+//     position: absolute;
+//     left: 0;
+//     top: var(--section-gap-2);
+//     transform: rotate(90deg);
+//     transform-origin: left;
+//     z-index: -1;
+// }
+
+// .vertical-text-left {
+//     position: absolute;
+//     transform-origin: left;
+//     right: 0;
+//     left: 30px;
+//     top: -30px;
+//     grid-column: 1/2;
+// }
+
+// .vertical-text-right {
+//     grid-column: 3/4;
+
+//     position: absolute;
+//     transform-origin: right;
+//     right: 30px;
+//     left: 0;
+//     top: -30px;
+// }
+
+// .vertical-text-container {
+//     // position: relative;
+// }

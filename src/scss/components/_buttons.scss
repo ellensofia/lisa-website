@@ -1,0 +1,40 @@
+@mixin standard($background: rgba(255, 255, 255, 0), $border: 2px solid var(--color-dark), $color: var(--color-dark)) {
+    color: $color;
+    padding: 14px 16px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: var(--font-size-0);
+    font-family: var(--font-family-secondary);
+    background: $background;
+    border-radius: 0;
+    border: $border;
+    cursor: pointer;
+
+    &:hover {
+        transition: all 0.3s;
+        color: var(--color-dark);
+        border-color: rgba($color: #000000, $alpha: 0);
+        background: rgba(31, 31, 31, 0.15);
+    }
+}
+
+@mixin secondary($background: var(--color-dark), $color:var(--color-light-1), $border: none) {
+    background-color: $background;
+    padding: 14px 16px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: var(--font-size-0);
+    font-family: var(--font-family-secondary);
+    background: $background;
+    border-radius: 0;
+    border: $border;
+    color: $color;
+    cursor: pointer;
+
+    &:hover {
+        transition: all 0.3s;
+        color: var(--color-dark);
+        background: rgba(31, 31, 31, 0.15);
+        border-color: rgba($color: #000000, $alpha: 0.5);
+    }
+}
