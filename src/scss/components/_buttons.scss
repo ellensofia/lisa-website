@@ -19,7 +19,7 @@
 }
 
 @mixin secondary($background: var(--color-dark), $color:var(--color-light-1), $border: none) {
-    background-color: $background;
+    color: $color;
     padding: 14px 16px;
     display: inline-block;
     text-decoration: none;
@@ -28,7 +28,6 @@
     background: $background;
     border-radius: 0;
     border: $border;
-    color: $color;
     cursor: pointer;
 
     &:hover {

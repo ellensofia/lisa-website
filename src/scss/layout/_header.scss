@@ -1,5 +1,7 @@
 .header {
     position: fixed;
+    height: 90px;
+    z-index: 999; //TEMP
 
     &__inner {
         display: flex;
@@ -10,4 +12,8 @@
     &__social {
         width: 30px;
     }
+}
+
+.branding img {
+    max-width: 95%;
 }
