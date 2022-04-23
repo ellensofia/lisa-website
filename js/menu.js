@@ -1,5 +1,7 @@
 window.onload = function () {
 
+    console.log("this is working");
+
     // Access elements from DOM
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".menu");
@@ -16,3 +18,4 @@ window.onload = function () {
     }))
 
 }
+
