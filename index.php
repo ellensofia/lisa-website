@@ -72,7 +72,7 @@ function onScroll() {
     window.addEventListener("scroll", () => {
 
         // if you are scrolling down add class "header--hidden"
-        if (lastScrollY < window.scrollY) {
+        if (lastScrollY < window.scrollY && (=! menu active) {
             header.classList.add("header--hidden");
         } else {
             header.classList.remove("header--hidden");
