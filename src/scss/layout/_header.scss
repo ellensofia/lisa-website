@@ -15,7 +15,7 @@
 }
 
 .header--hidden {
-    transform: translateY(calc(-1 * var(--nav-height)));
+    transform: translateY(calc(-2 * var(--nav-height)));
 }
 
 .header--background {

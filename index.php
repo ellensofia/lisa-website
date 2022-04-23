@@ -65,6 +65,7 @@ function onScroll() {
 
     // Get class .header from DOM
     const header = document.querySelector(".header");
+    const menu = document.querySelector(".nav");
     // Declare variable lastScrollY set equal to the number of pixels that has been scrolled up or down
     let lastScrollY = window.scrollY;
 
@@ -72,12 +73,12 @@ function onScroll() {
     window.addEventListener("scroll", () => {
 
         // if you are scrolling down add class "header--hidden"
-        if (lastScrollY < window.scrollY && (=! menu active) {
+        if (lastScrollY < window.scrollY) {
             header.classList.add("header--hidden");
         } else {
             header.classList.remove("header--hidden");
         }
-
+        
         // if you are further down than 580px add a background color
         if (lastScrollY >= 580) {
             header.classList.add("header--background");

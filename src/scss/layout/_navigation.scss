@@ -85,7 +85,7 @@
     }
 
     .menu {
-        grid-column: inner;
+        // grid-column: inner;
         position: fixed;
         padding: 10px;
         height: fit-content;
@@ -123,6 +123,8 @@
     .menu.active {
         left: 0;
         top: 0;
+        height: 156px;
+        position: fixed;
 
         &__list {}
     }
