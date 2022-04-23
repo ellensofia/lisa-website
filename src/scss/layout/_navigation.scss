@@ -89,7 +89,7 @@
         position: fixed;
         padding: 10px;
         height: fit-content;
-        left: -100%;
+        left: -120%;
         top: 0px;
         background-color: var(--color-dark);
         width: 100%;
@@ -100,6 +100,11 @@
 
         &__item {
             margin: 16px 0;
+        }
+
+        &__item a {
+            color: var(--color-light-1);
+
         }
 
         &__link {
@@ -118,5 +123,7 @@
     .menu.active {
         left: 0;
         top: 0;
+
+        &__list {}
     }
 }

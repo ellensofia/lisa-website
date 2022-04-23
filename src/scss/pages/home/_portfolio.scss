@@ -23,6 +23,11 @@
         padding-bottom: var(--section-gap-2);
     }
 
+    a {
+        color: var(--color-dark);
+
+    }
+
     &__title,
     &__link {
         padding-left: 36px;
@@ -49,7 +54,7 @@
         padding: 0 var(--section-gap-1);
 
         & img {
-            max-width: 35vw;
+            max-width: 30vw;
 
             &:last-child {
                 margin-left: var(--section-gap-base);

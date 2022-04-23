@@ -1,7 +1,8 @@
 .page-header {
-    height: 90px;
     background-color: var(--color-dark);
-    position: relative;
+    position: fixed;
+    margin: var(--nav-height) 0 0 0;
+    z-index: 100;
 
     &__inner {
         display: flex;
@@ -19,8 +20,9 @@
         padding: 8px 50px;
         display: flex;
 
-        &--arrow {
-            margin-left: var(--section-gap-base);
-        }
+    }
+
+    &__arrow {
+        margin-left: var(--section-gap-base);
     }
 }

@@ -1,9 +1,8 @@
 //section gap, ex on how to use scss variables
-// $section-gap: 10,26rem;
+// $section-gap: 8rem;
 
 /* Global Variables */
 :root {
-    // --section-gap: #{section};
     --section-gap-base: 10px;
     --section-gap-1: calc(var(--section-gap-base) * 1.75); //17px
     --section-gap-2: calc(var(--section-gap-1) * 1.75); //29.75
@@ -42,4 +41,6 @@
     --color-light-2: #F4F4F4;
     --color-light-1-transparent: rgba(193, 193, 193, 0.15);
     --color-white: #fff;
+
+    --nav-height: 90px;
 }

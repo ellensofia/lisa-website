@@ -12,10 +12,9 @@
 }
 
 .vertical-text-left {
-    grid-column: 1/2;
+    grid-column: 1/2; //remove
     left: 4vw;
     position: absolute;
-    top: 3%;
 }
 
 .vertical-text-right {
@@ -23,6 +22,19 @@
     transform-origin: right;
     z-index: 6;
     right: 65%;
-    top: 97%;
+    top: 100%;
     position: absolute;
+}
+
+@media screen and (max-width: 950px) {
+
+    .vertical-text {
+        font-size: 1px;
+        opacity: 0;
+    }
+
+    .vertical-text-left {
+        position: absolute;
+        top: 10%;
+    }
 }

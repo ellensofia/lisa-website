@@ -1,9 +1,5 @@
-.header {
-    // position: fixed;
-    // height: 90px;
-}
-
 .gallery {
+    margin-top: 120px;
     padding-top: var(--section-gap-3);
     position: relative;
 
@@ -72,6 +68,7 @@
 
     &__inner {
         padding: var(--section-gap-4) 8vw var(--section-gap-4) 0;
+        margin: var(--section-gap-4) 0;
     }
 
     &__title {
@@ -79,8 +76,9 @@
         font-size: clamp(2rem, 0.9584257975034673rem + 4vw, 4.00875rem);
     }
 
-    &__imgs {
+    &__content {
         display: flex;
+        align-items: flex-start;
         gap: var(--section-gap-base);
     }
 
@@ -89,53 +87,44 @@
         object-fit: contain;
     }
 
+    &__img-text {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__text {
         margin-top: var(--section-gap-2);
-        max-width: 400px;
+        min-width: 250px;
     }
 }
 
 
 @media screen and (max-width:637px) {
-    .exp__imgs {
+    .exp__content {
         flex-wrap: wrap;
     }
 
 }
 
+/*CUSTOM VARIABLES HERE*/
 
-// .vertical-text {
-//     background-color: pink;
-//     white-space: nowrap;
-//     font-size: 200px;
-//     color: var(--color-light-1-transparent);
-//     position: absolute;
-//     left: 0;
-//     top: var(--section-gap-2);
-//     transform: rotate(90deg);
-//     transform-origin: left;
-//     z-index: -1;
-// }
+.trigger-menu-wrapper {
+    transition: transform 0.4s;
+}
 
-// .vertical-text-left {
-//     position: absolute;
-//     transform-origin: left;
-//     right: 0;
-//     left: 30px;
-//     top: -30px;
-//     grid-column: 1/2;
-// }
+.scroll-down .trigger-menu-wrapper {
+    transform: translate3d(0, -100%, 0);
+}
 
-// .vertical-text-right {
-//     grid-column: 3/4;
+.scroll-down .lottie-wrapper {
+    background: var(--darkgray);
+}
 
-//     position: absolute;
-//     transform-origin: right;
-//     right: 30px;
-//     left: 0;
-//     top: -30px;
-// }
+.scroll-up .trigger-menu-wrapper {
+    transform: none;
+}
 
-// .vertical-text-container {
-//     // position: relative;
-// }
+.scroll-up:not(.menu-open) .trigger-menu-wrapper {
+    background: var(--lightpurple);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}

@@ -1,7 +1,7 @@
 .header {
     position: fixed;
-    height: 90px;
-    z-index: 999; //TEMP
+    height: var(--nav-height);
+    z-index: 500;
 
     &__inner {
         display: flex;
@@ -12,6 +12,15 @@
     &__social {
         width: 30px;
     }
+}
+
+.header--hidden {
+    transform: translateY(calc(-1 * var(--nav-height)));
+}
+
+.header--background {
+    transition: all 0.3s;
+    background-color: var(--color-light-2);
 }
 
 .branding img {

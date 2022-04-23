@@ -1,6 +1,7 @@
 @mixin link-transition($background: var(--color-dark)) {
     a {
         position: relative;
+        text-decoration: none;
 
         &:after {
             content: '';

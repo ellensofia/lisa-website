@@ -72,14 +72,6 @@
 }
 
 @media screen and (max-width: 800px) {
-    .gallery__item-5 {
-        flex-direction: column;
-
-        .gallery__img-5 {
-            max-width: 100%;
-            margin-bottom: var(--section-gap-base);
-        }
-    }
 
     .footer .form {
         &__input-names {
@@ -88,6 +80,15 @@
 
         &__field:last-child {
             margin-left: 0px;
+        }
+    }
+
+    .gallery__item-5 {
+        flex-direction: column;
+
+        .gallery__img-5 {
+            max-width: 70%;
+            margin-bottom: var(--section-gap-2);
         }
     }
 }
