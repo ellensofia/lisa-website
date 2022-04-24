@@ -1,8 +1,22 @@
+// Page header is 60px + 60px
+#page-header {
+    height: var(--nav-height);
+}
+
+#page-header__inner {
+    height: var(--nav-height);
+}
+
+.header--background {
+    // top: 0;
+}
+
 .page-header {
     background-color: var(--color-dark);
     position: fixed;
+    height: var(--page-nav-height);
     margin: var(--nav-height) 0 0 0;
-    z-index: 100;
+    z-index: 21;
 
     &__inner {
         display: flex;
@@ -19,10 +33,10 @@
         background-color: var(--color-light-1-transparent);
         padding: 8px 50px;
         display: flex;
-
     }
 
     &__arrow {
         margin-left: var(--section-gap-base);
+        width: 100%;
     }
 }

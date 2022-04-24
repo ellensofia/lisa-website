@@ -1,7 +1,7 @@
 .header {
     position: fixed;
     height: var(--nav-height);
-    z-index: 500;
+    z-index: 200;
 
     &__inner {
         display: flex;
@@ -14,8 +14,12 @@
     }
 }
 
+#page-header {
+    height: var(--page-nav-height);
+}
+
 .header--hidden {
-    transform: translateY(calc(-2 * var(--nav-height)));
+    transform: translateY(calc(-1 * var(--nav-height)));
 }
 
 .header--background {

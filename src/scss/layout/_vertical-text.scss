@@ -13,7 +13,7 @@
 
 .vertical-text-left {
     grid-column: 1/2; //remove
-    left: 4vw;
+    left: 3vw;
     position: absolute;
 }
 
@@ -27,14 +27,17 @@
 }
 
 @media screen and (max-width: 950px) {
+    // .gallery__inner {
+    //     padding-left: 0;
+    // }
 
-    .vertical-text {
-        font-size: 1px;
-        opacity: 0;
-    }
+    // .vertical-text {
+    //     font-size: 1px;
+    //     opacity: 0;
 
-    .vertical-text-left {
-        position: absolute;
-        top: 10%;
-    }
+    //     &-left {
+    //         position: absolute;
+    //         top: 10%;
+    //     }
+    // }
 }

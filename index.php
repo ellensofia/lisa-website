@@ -58,8 +58,8 @@
             </div>
     </section>
 
-    <script>
-    // Function to make header appeare when scrolling up
+<script>
+// Function to make header appeare when scrolling up
 
 function onScroll() {
 

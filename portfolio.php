@@ -1,6 +1,6 @@
 <?php // Template name: Portfolio ?>
 
-<?php include_once "header.php" ?>
+<?php include_once "porfolio-header.php" ?>
 
 <h5>Hej</h5>
 
